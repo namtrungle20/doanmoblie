@@ -2,6 +2,7 @@ import 'package:doanmobile/bloc/workout_cubit.dart';
 import 'package:doanmobile/bloc/workout_cubits.dart';
 import 'package:doanmobile/helpers.dart';
 import 'package:doanmobile/model/workout.dart';
+import 'package:doanmobile/screen/DatePicker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,8 +14,17 @@ class HomePages extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Bắt Đầu Nào !'),
-        actions: const [
-          IconButton(onPressed: null, icon: Icon(Icons.event_available)),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const DatePicker(title: 'DatePicker'),
+                ),
+              );
+            },
+            icon: const Icon(Icons.event_available),
+          ),
           IconButton(onPressed: null, icon: Icon(Icons.settings))
         ],
       ),
