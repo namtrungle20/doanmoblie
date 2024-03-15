@@ -43,4 +43,6 @@ class WorkoutCubits extends Cubit<WorkoutState> {
     }
     _timer = Timer.periodic(const Duration(seconds: 1), onTick);
   }
+
+  
 }

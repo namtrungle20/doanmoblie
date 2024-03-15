@@ -66,7 +66,7 @@ class WorkoutProgress extends StatelessWidget {
                       Text(fortmatTime(stats["workoutElapsed"], true)),
                       DotsIndicator(
                         dotsCount: stats['totalExercise'],
-                        //  position: stats['currentExecireIndex'],
+                        position: stats['currentExecireIndex'].toInt(),
                       ),
                       Text('-${fortmatTime(stats["workoutRemaining"], true)}')
                     ],
