@@ -105,3 +105,35 @@
     ]
   }
 ]
+
+
+// workout - exercises
+// 1 workout co nhiu bai tap 
+// 1 exercises thuoc ve 1 workout 
+
+// workout 
+// id
+// tilte:
+
+
+// ex 
+// title
+// duration
+// prelude
+// workout_id
+// link
+
+
+
+// user
+// id
+// name
+// pass
+
+
+// login/ register UI
+//  tao workout
+//  them ex vao workout
+
+
+

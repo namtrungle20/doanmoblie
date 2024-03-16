@@ -38,7 +38,6 @@ class WorkoutCubit extends HydratedCubit<List<Workout>> {
     state[index]=newWorkout;
     emit([...state]);
   }
-  
   @override
   List<Workout>? fromJson(Map<String, dynamic> json) {
     // TODO: implement fromJson

@@ -12,7 +12,7 @@ class Workout extends Equatable {
     for (var ex in json['exercises'] as Iterable) {
       exercises.add(Exercises.fromJson(ex, index, startTime));
       index++;
-      startTime += exercises.last.prelude! + exercises.last.duration!;
+      startTime == exercises.last.duration!;
     }
     return Workout(exercises: exercises, title: json['title'] as String?);
   }
@@ -22,7 +22,7 @@ class Workout extends Equatable {
       Workout(exercises: exercises, title: title ?? this.title);
 
   int getTotal() =>
-      exercises.fold(0, (prev, ex) => prev + ex.duration! + ex.prelude!);
+      exercises.fold(0, (prev, ex) => prev + ex.duration!);
 
   Exercises getCurrentExercise(int? elapsed) =>
       exercises.lastWhere((element) => element.startTime! <= elapsed!);
